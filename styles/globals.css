@@ -1,3 +1,38 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* html, body, heading */
+@layer base {
+  body {
+    @apply bg-black text-white ;
+  }
+  header {
+    @apply fixed top-0 z-50 flex w-full items-center justify-between px-6 py-6 transition-all lg:px-10 lg:py-6 duration-[1s];
+    hover:text-[#e5e5e5];
+  }
+  header {
+    background-color: black
+  }
+  main{
+    height:3000px;
+  }
+    .topBar img{
+    @apply visible lg:w-36 md:w-24  sm:w-20  w-20 transition-all duration-[.5s] 
+  }
+}
+
+@layer components {
+  .headerLink {
+    @apply cursor-pointer text-sm font-light text-[#e5e5e5] transition duration-[.5s]
+    hover:text-[#b3b3b3];
+  }
+  .homeTab{
+    @apply bg-black font-bold sm:align-middle
+    /* hover:bg-slate-300 text-[#999999] */
+  }
+  .movieBlock {    
+    background-color:#e5e5e5;
+    color:#999;
+  }
+}
