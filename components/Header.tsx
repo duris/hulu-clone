@@ -4,8 +4,8 @@ import { useEffect, useState } from 'react'
 
 
 function Header() {
+    
     const [isScrolled, setIsScrolled] = useState(false)
-
     useEffect(() => {
         const handleScroll = () => {
             if (window.scrollY > 0) {
@@ -14,28 +14,22 @@ function Header() {
                 setIsScrolled(false)
             }
         }
-
         window.addEventListener("scroll", handleScroll)
-
         return () => {
             window.removeEventListener('scroll', handleScroll)
         }
     },[])
 
     return (
-    <header className={`${isScrolled && 'bg-[#212121] bg-opacity-40'}`}>
+    <header className={`${isScrolled && 'bg-gradient-to-b from-transparent to-transparent '}`}>
         <div className="flex items-center space-x-2 md:space-x-10 topBar">
             <img
                 src='/images/logo.png'
                 width={120}
                 height={100}
                 className="cursor-pointer object-contain"
-                />
-        
-            
-        <div className="flex items-center space-x-4 text-sm fontl float-right">
-            
-                               
+                />                    
+        <div className="flex items-center space-x-4 text-sm fontl float-right">                                           
         </div>
 
         <Link href="/">
